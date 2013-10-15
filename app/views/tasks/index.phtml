@@ -1,0 +1,11 @@
+<?php
+
+echo '<h1>Welcome '.$user->name.'</h1>';
+
+echo "<p>This is your to-do list</p>";
+
+foreach (Users::find() as $task) {
+   echo "<span class='category'>", $task->name, "</span>";
+}
+
+echo Phalcon\Tag::linkTo('signup/end', 'Log out');

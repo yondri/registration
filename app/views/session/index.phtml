@@ -1,0 +1,46 @@
+<div class="login-or-signup">
+    <div class="row">
+
+        <div class="span6">
+            <div class="page-header">
+                <h2>Log In</h2>
+            </div>
+            <?php echo Tag::form("session/start"); ?>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="email">Username/Email</label>
+                        <div class="controls">
+                            <?php echo Tag::textField("email") ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <?php echo Tag::passwordField ("password") ?>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <?php echo Tag::submitButton("Login") ?>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="span6">
+            <div class="page-header">
+                <h2>Don't have an account yet?</h2>
+            </div>
+
+            <p>Create an account offers the following advantages:</p>
+            <ul>
+                <li>Create, track and get done your task lists</li>
+                <li>Some other shit</li>
+            </ul>
+
+            <div class="clearfix center">
+            	<?php echo Phalcon\Tag::linkTo('session/register', 'Register'); ?>
+            </div>
+        </div>
+
+    </div>
+</div>

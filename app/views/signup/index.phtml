@@ -1,0 +1,31 @@
+<?php use Phalcon\Tag; ?>
+
+<h2>Sign using this form</h2>
+
+<?php echo Tag::form("session/register"); ?>
+
+ <p>
+    <label for="name">Name</label>
+    <?php echo Tag::textField("name") ?>
+ </p>
+
+ <p>
+    <label for="name">E-Mail</label>
+    <?php echo Tag::textField("email") ?>
+ </p>
+ 
+ <p>
+    <label for="username">Username</label>
+    <?php echo Tag::textField("username") ?>
+ </p>
+ 
+ <p>
+    <label for="username">Password</label>
+    <?php echo Tag::passwordField ("password") ?>
+ </p>
+
+ <p>
+    <?php echo Tag::submitButton("Register") ?>
+ </p>
+
+</form>
